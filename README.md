@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
@@ -72,27 +71,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
-=======
-# Practice-NestJS
-A general practice of using Nest.js
-
-### Install the Nest.js command-line interface (CLI) globally on your system
-npm install -g @nestjs/cli
-
-### Run the following command to create a new Nest.js project
-nest new <<project name>>
-
-### Create a new module with the specified name and generate the necessary files and code structure for the module (Make sure you are in the root directory of your Nest.js project.)
-nest generate module <<module name>>
-
-### To generate a controller file with a specific name and directory structure in a Nest.js project using the Nest.js CLI
-nest generate controller messages/messages --flat 
-
-- nest generate controller: This part of the command tells the Nest.js CLI to generate a controller.
-
-- messages/messages: This specifies the name and directory structure for the generated controller. In this case, it creates a controller named "messages" within a directory named "messages" (nested controller).
-
-- --flat: The --flat option is used to generate the controller file directly in the src/ directory, without creating a subdirectory for it. It ensures that the generated controller file is placed at the root level of the src/ directory.
-
-### The command is useful in scenarios where you want to create a controller with a specific name and directory structure. It allows you to organize your controllers in a hierarchical manner by creating subdirectories for different sections or features of your application.
->>>>>>> main
