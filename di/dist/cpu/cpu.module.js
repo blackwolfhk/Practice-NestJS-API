@@ -9,11 +9,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CpuModule = void 0;
 const common_1 = require("@nestjs/common");
 const cpu_service_1 = require("./cpu.service");
+const power_module_1 = require("../power/power.module");
 let CpuModule = exports.CpuModule = class CpuModule {
 };
 exports.CpuModule = CpuModule = __decorate([
     (0, common_1.Module)({
-        providers: [cpu_service_1.CpuService]
+        imports: [power_module_1.PowerModule],
+        providers: [cpu_service_1.CpuService],
+        exports: [cpu_service_1.CpuService],
     })
 ], CpuModule);
 //# sourceMappingURL=cpu.module.js.map

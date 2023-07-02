@@ -13,7 +13,8 @@ let PowerModule = exports.PowerModule = class PowerModule {
 };
 exports.PowerModule = PowerModule = __decorate([
     (0, common_1.Module)({
-        providers: [power_service_1.PowerService]
+        providers: [power_service_1.PowerService],
+        exports: [power_service_1.PowerService],
     })
 ], PowerModule);
 //# sourceMappingURL=power.module.js.map

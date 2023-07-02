@@ -9,6 +9,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PowerService = void 0;
 const common_1 = require("@nestjs/common");
 let PowerService = exports.PowerService = class PowerService {
+    supplyPower(watts) {
+        console.log(`Supplying ${watts} worth of power`);
+    }
 };
 exports.PowerService = PowerService = __decorate([
     (0, common_1.Injectable)()

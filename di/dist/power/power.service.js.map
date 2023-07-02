@@ -1,1 +1,1 @@
-{"version":3,"file":"power.service.js","sourceRoot":"","sources":["../../src/power/power.service.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAA4C;AAGrC,IAAM,YAAY,0BAAlB,MAAM,YAAY;CAAG,CAAA;uBAAf,YAAY;IADxB,IAAA,mBAAU,GAAE;GACA,YAAY,CAAG"}
+{"version":3,"file":"power.service.js","sourceRoot":"","sources":["../../src/power/power.service.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAA4C;AAGrC,IAAM,YAAY,0BAAlB,MAAM,YAAY;IACrB,WAAW,CAAC,KAAa;QACrB,OAAO,CAAC,GAAG,CAAC,aAAa,KAAK,iBAAiB,CAAC,CAAC;IACrD,CAAC;CACJ,CAAA;uBAJY,YAAY;IADxB,IAAA,mBAAU,GAAE;GACA,YAAY,CAIxB"}

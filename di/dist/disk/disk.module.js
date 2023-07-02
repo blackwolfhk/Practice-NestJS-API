@@ -9,11 +9,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DiskModule = void 0;
 const common_1 = require("@nestjs/common");
 const disk_service_1 = require("./disk.service");
+const power_module_1 = require("../power/power.module");
 let DiskModule = exports.DiskModule = class DiskModule {
 };
 exports.DiskModule = DiskModule = __decorate([
     (0, common_1.Module)({
-        providers: [disk_service_1.DiskService]
+        imports: [power_module_1.PowerModule],
+        providers: [disk_service_1.DiskService],
+        exports: [disk_service_1.DiskService],
     })
 ], DiskModule);
 //# sourceMappingURL=disk.module.js.map
