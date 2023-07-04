@@ -1,4 +1,3 @@
-import { log } from 'console';
 import { AfterInsert, AfterRemove, AfterUpdate, Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
