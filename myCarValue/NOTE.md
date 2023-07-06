@@ -8,3 +8,8 @@ nest g service reports
 
 ### Using typeorm & SQLite package
 npm install @nestjs/typeorm typeorm sqlite3
+
+## Testing Note
+npm run test:watch
+
+then press "p"
