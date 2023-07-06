@@ -14,12 +14,13 @@ export class UsersService {
     }
 
     findOne(id: number) {
-        // return this.repo.findOne(id);
+        if (!id) {
+            return null;
+        }
         return this.repo.findOne({ where: { id } });
     }
 
     find(email: string) {
-        // return this.repo.find({ email });
         return this.repo.find({ where: { email } });
 
     }
