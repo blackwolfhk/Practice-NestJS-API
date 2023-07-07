@@ -1,12 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getAllUsers } from './apiMiddleware';
 
+interface User {
+  id: number;
+  email: string;
+}
+
 const App: React.FC = () => {
+  const [users, setUsers] = useState<User[]>([]);
+
   useEffect(() => {
     const fetchAllUsers = async () => {
       try {
-        const users = await getAllUsers(); // Call the getAllUsers function
-        console.log(users); // Log the retrieved users
+        const fetchedUsers = await getAllUsers();
+        console.log("fetchedUsers :", fetchedUsers);
+        if (Array.isArray(fetchedUsers)) {
+          setUsers(fetchedUsers);
+        } else {
+          console.error('Invalid data format for users');
+        }
       } catch (error) {
         console.error(error);
       }
@@ -17,7 +29,13 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <div>Testing</div>
+      <h4>Print All Users</h4>
+      {users.map((user) => (
+        <ul key={user.id}>
+          <div>User ID:{user.id}</div>
+          <div>User email: {user.email}</div>
+        </ul>
+      ))}
     </div>
   );
 };
