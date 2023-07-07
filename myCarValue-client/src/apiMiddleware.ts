@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios from 'axios';
 
 type User = {
     id: number;
@@ -36,23 +36,4 @@ export async function getAllUsers() {
         }
     }
 }
-
-// export const getAllUsers = async (headers?: object, params?: object): Promise<any> => {
-//     const config: AxiosRequestConfig = {
-//         headers: {
-//             ...headers, // Add any additional headers here
-//         },
-//         params: {
-//             ...params, // Add any additional parameters here
-//         },
-//     };
-
-//     try {
-//         const response = await axios.get('/auth', config);
-//         return response.data;
-//     } catch (error) {
-//         console.error(error);
-//         throw new Error('Error occurred while fetching all users.');
-//     }
-// };
 

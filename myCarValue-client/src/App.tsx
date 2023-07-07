@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllUsers } from './apiMiddleware';
+import axios from 'axios';
 
 interface User {
   id: number;
