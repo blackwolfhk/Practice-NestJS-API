@@ -28,7 +28,6 @@ describe('AuthService', () => {
         }).compile();
 
         service = module.get(AuthService);
-
     });
 
 
@@ -55,7 +54,6 @@ describe('AuthService', () => {
             );
         } catch (err) {
             console.log("err :", err);
-
         }
     });
 
@@ -64,5 +62,36 @@ describe('AuthService', () => {
             service.signin('asdflkj@asklfkj.com', 'passagfd'),
         ).rejects.toThrow(NotFoundException);
     })
+
+    it('throws if an invalid password is provided', async () => {
+        fakeUsersService.find = () =>
+            Promise.resolve([
+                { 
+                    email: 'asdf@asdf.com', 
+                    password: 'llaskdjf' 
+                } as User,
+            ]);
+        try {
+            await expect(
+                service.signin('zdxfgasdg@asdfga.com', 'passowrd'),
+            ).rejects.toThrow(BadRequestException);
+        } catch (err) {
+            console.log("err :", err);
+        }
+    });
+
+    it('returns a user if correct password is provided', async () => {
+        fakeUsersService.find = () =>
+            Promise.resolve([
+                {
+                    email: 'asdf@asdf.com',
+                    password: '2fdb2914ed8a134d.98d93e2915696c8df86f8dc4d3632b889daa273a0d669a7b59cdc9d3597515df'
+                } as User,
+            ]);
+
+        const user = await service.signin('asdf@sdgs.com', 'mypassword');
+        expect(user).toBeDefined();
+    });
+
 
 });
