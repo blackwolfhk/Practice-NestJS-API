@@ -22,7 +22,6 @@ export class UsersService {
 
     find(email: string) {
         return this.repo.find({ where: { email } });
-
     }
 
     // "Partial" - Only to update properties absolute belongs to users

@@ -37,3 +37,19 @@ export async function getAllUsers() {
     }
 }
 
+export async function getUserById(userId: number) {
+    try {
+        const users = await getAllUsers();
+        if (Array.isArray(users)) {
+            const user = users.find((u) => u.id === userId);
+            console.log("user-middleware :", user);
+            
+            return user || null;
+        } else {
+            console.log('Error fetching users:', users);
+            return null;
+        }
+    } catch (error) {
+        console.log("error :", error)
+    }
+}
